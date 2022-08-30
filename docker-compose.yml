@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.3'
 services:
   ## this service is used to generate laravel app with composer
   #  compose:
@@ -14,10 +14,10 @@ services:
       MYSQL_ROOT_PASSWORD: 'root'
     volumes:
       - ./db:/var/lib/mysql
-    ports:
-      - 6606:3306
+#    ports:
+#      - 6606:3306
   core:
-    image: leaseweb-core
+    image: avazifehdoust/php8-fpm
     hostname: leaseweb-core
     volumes:
     - ./core:/app
