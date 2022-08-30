@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('servers', \App\Http\Controllers\ServerController::class)
+    ->except(['show', 'update']);
+Route::get('/brands', \App\Http\Controllers\GetBrands::class);
