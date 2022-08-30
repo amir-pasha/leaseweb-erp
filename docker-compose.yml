@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  ## this service is used to generate laravel app with composer
+  #  compose:
+  #    image: composer:latest
+  #    volumes:
+  #    - ./core:/app/core
+  #    command: composer create-project laravel/laravel core
+  db:
+    image: mysql:latest
+    hostname: leaseweb-db
+    environment:
+      MYSQL_DATABASE: 'leaseweb-erp'
+      MYSQL_ROOT_PASSWORD: 'root'
+    volumes:
+      - ./db:/var/lib/mysql
+    ports:
+      - 6606:3306
+  core:
+    image: leaseweb-core
+    hostname: leaseweb-core
+    volumes:
+    - ./core:/app
+    ports:
+    - 8001:80
+    command: php artisan serve --host=0.0.0.0 --port=80
