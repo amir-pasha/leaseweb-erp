@@ -3,10 +3,9 @@
 namespace App\Repositories;
 
 
-use App\Contracts\BaseRepositoryInterface;
 use Illuminate\Database\Eloquent\Model;
 
-abstract class BaseRepository implements BaseRepositoryInterface
+abstract class BaseRepository
 {
     abstract public function getModel();
 
