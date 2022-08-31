@@ -5,9 +5,10 @@ namespace App\Http\Requests\Server;
 
 
 use App\Models\ServerRam;
+use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-class StoreRequest extends FormRequ
+class StoreRequest extends FormRequest
 {
     public function rules()
     {
