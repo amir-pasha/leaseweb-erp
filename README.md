@@ -60,6 +60,6 @@ Docker images:
 the project.
   
 ## Recommendations:
-- Full coverage test are ignored due to time limitation   
+- Full test coverage are ignored due to time limitation   
 - UI can definitely be improved
 - As complexity grows, frontend can be served with frameworks such as Vue.js and React.js. 
